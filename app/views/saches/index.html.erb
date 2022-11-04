@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="px-4">
+  <div class="d-flex justify-conten-start">
+    <h6 class="text-success fs-4 d-flex flex-column align-items-center">
+      <span>THƯ VIỆN</span> TRƯỜNG TIỂU HỌC PHONG THẠNH TÂY A
+    </h6>
+  </div>
+  <div class="d-flex align-items-center justify-content-between">
+    <h2 class="text-warning">QUẢN LÝ CHO HỌC SINH MƯỢN SÁCH</h2>
+    <div class="d-flex align-items-center">
+      <p class="text-primary">Quy định ngày quá hạn</p>
+      <p class="ms-2 p-3 border border-success">3</p>
+    </div>
+  </div>
+</div>
+
+<table id="saches" class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>STT</th>
+      <th>Mã HS</th>
+      <th>Họ và tên</th>
+      <th>Lớp</th>
+      <th>Mã sách</th>
+      <th>Tên sách</th>
+      <th>Tên tác giả</th>
+      <th>Tủ sách</th>
+      <th>Số BM</th>
+      <th>Ngày mượn</th>
+      <th>Ngày trả</th>
+      <th>Số ngày</th>
+      <th>Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>  
+    <% @saches.each do |sach| %>
+      <%= render sach %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New sach", new_sach_path, class:"btn btn-secondary" %>
